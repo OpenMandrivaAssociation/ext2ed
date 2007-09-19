@@ -1,8 +1,8 @@
 Summary:	An ext2 filesystem editor
 Name:		ext2ed
 Version:	0.1
-Release:	%mkrel 26
-License:	GPL
+Release:	%mkrel 27
+License:	GPL+
 Group:		System/Kernel and hardware 
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.bz2
 Patch0:		ext2ed-0.1-config.patch
@@ -59,5 +59,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc/user-guide-0.1.sgml
 %doc doc/user-guide-0.1.ps
 %doc doc/Ext2fs-overview-0.1.sgml
-
 
