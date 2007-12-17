@@ -14,7 +14,6 @@ Patch5:		ext2ed-0.1-linux2.6-buildfix.patch
 BuildRequires:	ncurses-devel readline-devel e2fsprogs-devel
 # this should only be built on little endian machines!
 ExclusiveArch:	alpha %{ix86} ppc x86_64
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Ext2ed is a program which provides a text and window interface for
