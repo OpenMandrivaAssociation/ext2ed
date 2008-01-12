@@ -1,7 +1,7 @@
 Summary:	An ext2 filesystem editor
 Name:		ext2ed
 Version:	0.1
-Release:	%mkrel 27
+Release:	%mkrel 28
 License:	GPL+
 Group:		System/Kernel and hardware 
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.bz2
