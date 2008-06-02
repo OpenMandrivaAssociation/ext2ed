@@ -41,11 +41,11 @@ and you know what you're doing.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8,%{_localstatedir}}
+mkdir -p $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8,%{_localstatedir}/lib}
 
 make	BIN_DIR=$RPM_BUILD_ROOT%{_bindir} \
 	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man8 \
-	VAR_DIR=$RPM_BUILD_ROOT%{_localstatedir}/ext2ed \
+	VAR_DIR=$RPM_BUILD_ROOT%{_localstatedir}/lib/ext2ed \
 	install
 
 %clean
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%{_localstatedir}/ext2ed
+%{_localstatedir}/lib/ext2ed
 %{_bindir}/ext2ed
 %{_mandir}/man8/ext2ed.8*
 %doc doc/user-guide-0.1.sgml
