@@ -1,7 +1,7 @@
 Summary:	An ext2 filesystem editor
 Name:		ext2ed
 Version:	0.1
-Release:	%mkrel 30
+Release:	%mkrel 31
 License:	GPL+
 Group:		System/Kernel and hardware 
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.bz2
@@ -11,6 +11,7 @@ Patch2:		ext2ed-0.1-glibc.patch
 Patch3:		ext2ed-0.1-compat21.patch
 Patch4:		ext2ed-0.1-noreadline.patch
 Patch5:		ext2ed-0.1-linux2.6-buildfix.patch
+Patch6:		ext2ed-0.1-no-masix.patch
 BuildRequires:	ncurses-devel readline-devel e2fsprogs-devel
 # this should only be built on little endian machines!
 ExclusiveArch:	alpha %{ix86} ppc x86_64
@@ -27,14 +28,14 @@ Install ext2ed if you want to examine and/or edit your ext2 filesystem,
 and you know what you're doing.
 
 %prep
-
 %setup -q
-%patch -p0 -b .config
-%patch1 -p1 -b .inode
-%patch2 -p1 -b .glibc
-%patch3 -p1 -b .compat21
-%patch4 -p1 -b .noreadline
-%patch5 -p1 -b .peroyvind
+%patch0 -p0 -b .config~
+%patch1 -p1 -b .inode~
+%patch2 -p1 -b .glibc~
+%patch3 -p1 -b .compat21~
+%patch4 -p1 -b .noreadline~
+%patch5 -p1 -b .peroyvind~
+%patch6 -p1 -b .no_masix~
 
 %build
 %make
