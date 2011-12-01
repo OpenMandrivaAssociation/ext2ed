@@ -41,16 +41,16 @@ and you know what you're doing.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8,%{_localstatedir}/lib}
+rm -rf %{buildroot}
+mkdir -p %{buildroot}{%{_bindir},%{_mandir}/man8,%{_localstatedir}/lib}
 
-make	BIN_DIR=$RPM_BUILD_ROOT%{_bindir} \
-	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man8 \
-	VAR_DIR=$RPM_BUILD_ROOT%{_localstatedir}/lib/ext2ed \
+make	BIN_DIR=%{buildroot}%{_bindir} \
+	MAN_DIR=%{buildroot}%{_mandir}/man8 \
+	VAR_DIR=%{buildroot}%{_localstatedir}/lib/ext2ed \
 	install
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
