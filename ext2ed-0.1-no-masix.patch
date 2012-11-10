@@ -1,0 +1,14 @@
+diff -p -up ext2ed-0.1/super_com.c.no_masix~ ext2ed-0.1/super_com.c
+--- ext2ed-0.1/super_com.c.no_masix~	2009-03-16 18:39:49.884710959 -0400
++++ ext2ed-0.1/super_com.c	2009-03-16 18:39:36.175547169 -0400
+@@ -101,10 +101,6 @@ void type_ext2_super_block___show (char 
+ 			wprintw (show_pad,"Hurd");
+ 			break;
+ 
+-		case EXT2_OS_MASIX:
+-			wprintw (show_pad,"Masix");
+-			break;
+-
+ 		default:
+ 			wprintw (show_pad,"Unknown");
+ 			break;
